@@ -65,7 +65,7 @@ public class CrptApi {
 
         HttpRequest request = HttpRequest.newBuilder()
                 .POST(BodyPublishers.ofString(mapToString(documentRequest)))
-                .uri(URI.create(API_URL + "/api/v3/lk/documents/create?pg=" + productGroup))
+                .uri(URI.create(API_URL + "/lk/documents/create?pg=" + productGroup))
                 .setHeader(CONTENT_TYPE, APPLICATION_JSON)
                 .setHeader("Authorization", "Bearer " + getAuthToken())
                 .build();
